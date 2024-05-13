@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Link from 'next/link';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +17,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <div className="p-4 border-b">
+           Medium website
+          <button className="mx-2 text-white bg-gray-800 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2">
+            <Link href="/auth/signin">
+              Signin
+            </Link>
+          </button>
+          <button  className="mx-2 text-white bg-gray-800 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2">
+            <Link href="/auth/signup">
+              Signup
+            </Link>
+          </button>
+        </div>
+        {children}
+        </body>
     </html>
   );
 }
