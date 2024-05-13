@@ -21,12 +21,12 @@ export default function RootLayout({
         <div className="p-4 border-b">
            Medium website
           <button className="mx-2 text-white bg-gray-800 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2">
-            <Link href="/auth/signin">
+            <Link href="/signin">
               Signin
             </Link>
           </button>
           <button  className="mx-2 text-white bg-gray-800 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2">
-            <Link href="/auth/signup">
+            <Link href="/signup">
               Signup
             </Link>
           </button>
